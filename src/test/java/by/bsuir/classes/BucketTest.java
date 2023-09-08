@@ -8,7 +8,7 @@ public class BucketTest {
     Bucket bucket;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         bucket = new Bucket();
         Ball[] balls = new Ball[] {new Ball(60.0, Ball.Color.BLUE),
                 new Ball(23.0, Ball.Color.BLACK),

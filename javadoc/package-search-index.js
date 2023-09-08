@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"by.bsuir"},{"l":"by.bsuir.classes"},{"l":"by.bsuir.fundamentals"}];updateSearchResults();

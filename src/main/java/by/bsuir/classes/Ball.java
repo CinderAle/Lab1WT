@@ -11,10 +11,9 @@ public class Ball {
         this.weight = weight;
         this.color = color;
     }
-    private void enterWeight() {
+    private void enterWeight(Scanner scan) {
         double weight = 0.0;
         boolean isCorrect;
-        Scanner scan = new Scanner(System.in);
         do {
             isCorrect = true;
             System.out.print("Enter the weight: ");
@@ -26,13 +25,11 @@ public class Ball {
                 System.err.println("Wrong value!");
             }
         } while(!isCorrect);
-        scan.close();
         setWeight(weight);
     }
-    private void enterColor() {
+    private void enterColor(Scanner scan) {
         Color color = Color.WHITE;
         boolean isCorrect;
-        Scanner scan = new Scanner(System.in);
         do{
             isCorrect = true;
             System.out.print("Enter the color: ");
@@ -44,12 +41,11 @@ public class Ball {
                 System.err.println("Wrong value!");
             }
         } while(!isCorrect);
-        scan.close();
         setColor(color);
     }
-    public Ball() {
-        enterWeight();
-        enterColor();
+    public Ball(Scanner scanner) {
+        enterWeight(scanner);
+        enterColor(scanner);
     }
     public void show() {
         System.out.println("Weight: " + getWeight() + "Color:" + getColor());

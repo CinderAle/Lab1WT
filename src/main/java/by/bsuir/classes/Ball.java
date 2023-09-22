@@ -34,7 +34,7 @@ public class Ball {
             isCorrect = true;
             System.out.print("Enter the color: ");
             try {
-                color = Color.valueOf(scan.nextLine());
+                color = Color.valueOf(scan.nextLine().toUpperCase());
             }
             catch(Exception e){
                 isCorrect = false;
@@ -48,7 +48,7 @@ public class Ball {
         enterColor(scanner);
     }
     public void show() {
-        System.out.println("Weight: " + getWeight() + "Color:" + getColor());
+        System.out.println("Weight: " + getWeight() + " Color: " + getColor());
     }
     public Double getWeight() {
         return weight;

@@ -37,7 +37,7 @@ public class Main {
             switch (option) {
                 case 1 -> bucket.addBall(new Ball(scan));
                 case 2 -> System.out.println("Weight: " + bucket.getAllBallsWeight());
-                case 3 -> System.out.println("Number of blue balls:" + bucket.getNumberOfBallsByColor(Ball.Color.BLUE));
+                case 3 -> System.out.println("Number of blue balls: " + bucket.getNumberOfBallsByColor(Ball.Color.BLUE));
                 case 4 -> {
                     bucket.clear();
                     System.out.println("The bucket was cleared");

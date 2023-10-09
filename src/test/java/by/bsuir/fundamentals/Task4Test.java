@@ -1,10 +1,7 @@
 package by.bsuir.fundamentals;
 
-import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.HashSet;
-
 import static org.junit.Assert.*;
 
 public class Task4Test extends Task4 {
@@ -22,6 +19,6 @@ public class Task4Test extends Task4 {
         primaryNumbers.add(0);
         primaryNumbers.add(2);
         primaryNumbers.add(4);
-        Assert.assertEquals(primaryNumbers, Task4.solve(array));
+        assertEquals(primaryNumbers, Task4.solve(array));
     }
 }

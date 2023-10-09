@@ -24,12 +24,29 @@ public class ProgrammerBook extends Book {
     public String toString() {
         return super.toString() + "[language = \"" + this.language + "\", level = " + this.level + "]";
     }
+
+    @Override
+    public boolean equals(Object object) {
+        return super.equals(object);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    /*@Override
+    public int compare(Object o1, Object o2) {
+        return super.compare(o1, o2);
+    }*/
+
     @Override
     public ProgrammerBook clone() {
         return new ProgrammerBook(this.getTitle(), this.getAuthor(), this.getPrice(), this.language, this.level);
     }
     @Override
-    public int compareTo(Object object) {
-        return super.compareTo(object);
+    public int compareTo(Book object) {
+        ProgrammerBook pObject = (ProgrammerBook) object;
+        return super.compareTo(pObject);
     }
 }

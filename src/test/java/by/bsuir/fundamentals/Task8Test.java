@@ -1,7 +1,7 @@
 package by.bsuir.fundamentals;
 
-import org.junit.Assert;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class Task8Test extends Task8 {
 
@@ -12,7 +12,7 @@ public class Task8Test extends Task8 {
         Integer[] spots = new Integer[] {0,1,3,4,-1};
         Integer[] actualSpots = Task8.getSpots(a, b);
         for(int i = 0;i < spots.length;i++) {
-            Assert.assertEquals(spots[i], actualSpots[i]);
+            assertEquals(spots[i], actualSpots[i]);
         }
     }
 }

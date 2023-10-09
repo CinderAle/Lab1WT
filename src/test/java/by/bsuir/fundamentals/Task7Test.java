@@ -1,10 +1,7 @@
 package by.bsuir.fundamentals;
 
-import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.Arrays;
-
 import static org.junit.Assert.*;
 
 public class Task7Test extends Task7 {
@@ -15,7 +12,7 @@ public class Task7Test extends Task7 {
         Double[] sortedArray = Task7.shellSort(array);
         Arrays.sort(array);
         for(int i = 0;i < array.length;i++) {
-            Assert.assertEquals(array[i], sortedArray[i]);
+            assertEquals(array[i], sortedArray[i]);
         }
     }
 }

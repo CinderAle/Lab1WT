@@ -1,6 +1,5 @@
 package by.bsuir.fundamentals;
 
-import jdk.jfr.Description;
 import org.junit.Assert;
 import org.junit.Test;
 

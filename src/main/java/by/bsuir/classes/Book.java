@@ -1,24 +1,31 @@
 package by.bsuir.classes;
 
-import java.util.Comparator;
 import java.util.Objects;
 
-public class Book implements java.lang.Comparable, Comparator {
+public class Book implements java.lang.Comparable<Book> {
     private String title;
     private String author;
     private int price;
     private static int edition;
     private int isbn;
 
+    public Book(String title, String author, int price, int isbn) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+        this.isbn = isbn;
+    }
     public Book(String title, String author, int price) {
         this.title = title;
         this.author = author;
         this.price = price;
+        this.isbn = 0;
     }
     public Book() {
         this.title = "";
         this.author = "";
         this.price = 0;
+        this.isbn = 0;
     }
     public String getTitle() {
         return title;
@@ -58,7 +65,8 @@ public class Book implements java.lang.Comparable, Comparator {
         Book bookObject = (Book) object;
         return this.price == bookObject.price &&
                this.title.equals(bookObject.title) &&
-               this.author.equals(bookObject.author);
+               this.author.equals(bookObject.author) &&
+               this.isbn == bookObject.isbn;
     }
     @Override
     public String toString() {
@@ -72,19 +80,10 @@ public class Book implements java.lang.Comparable, Comparator {
         return new Book(this.title, this.author, this.price);
     }
     @Override
-    public int compareTo(Object object) {
+    public int compareTo(Book object) {
         if(this.equals(object)) {
             return 0;
         }
-        Book book = (Book) object;
-        return this.isbn > book.isbn ? 1 : -1;
-    }
-    @Override
-    public int compare(Object o1, Object o2) {
-        return 0;
-    }
-    @Override
-    public Comparator reversed() {
-        return Comparator.super.reversed();
+        return this.isbn > ((Book) object).isbn ? 1 : -1;
     }
 }

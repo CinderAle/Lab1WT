@@ -1,5 +1,6 @@
-package by.bsuir.classes;
+package by.bsuir.classes.comparators;
 
+import by.bsuir.classes.Book;
 import org.junit.Test;
 
 import java.util.Arrays;

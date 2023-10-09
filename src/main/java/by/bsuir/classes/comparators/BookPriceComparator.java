@@ -1,4 +1,6 @@
-package by.bsuir.classes;
+package by.bsuir.classes.comparators;
+
+import by.bsuir.classes.Book;
 
 import java.util.Comparator;
 

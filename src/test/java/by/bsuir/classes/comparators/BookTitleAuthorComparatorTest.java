@@ -1,12 +1,13 @@
-package by.bsuir.classes;
+package by.bsuir.classes.comparators;
 
+import by.bsuir.classes.Book;
 import org.junit.Test;
 
 import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
-public class BookTitleAuthorComparatorTest extends BookTitleAuthorComparator {
+public class BookTitleAuthorComparatorTest {
 
     @Test
     public void testCompare() {

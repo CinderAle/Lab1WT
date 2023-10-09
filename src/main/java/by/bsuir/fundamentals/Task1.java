@@ -1,7 +1,5 @@
 package by.bsuir.fundamentals;
 
-import java.util.Scanner;
-
 public class Task1 {
     private static Double x, y;
     private static Double numerator() {

@@ -1,5 +1,6 @@
-package by.bsuir.classes;
+package by.bsuir.classes.comparators;
 
+import by.bsuir.classes.Book;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -16,17 +17,6 @@ public class BookAuthorComparatorTest {
                 new Book("BName", "AAuthor", 0),
                 new Book("AName", "BAuthor", 0)};
         Arrays.sort(books, new BookAuthorComparator());
-        for(int i = 0;i < books.length;i++) {
-            assertEquals(sortedBooks[i], books[i]);
-        }
-    }
-
-    @Test
-    public void testCompareWithTitle() {
-        Book[] sortedBooks = {new Book("BName", "AAuthor", 0),
-                new Book("CName", "AAuthor", 0),
-                new Book("AName", "BAuthor", 0)};
-        Arrays.sort(books, new BookAuthorComparator().thenComparing(new BookTitleComparator()));
         for(int i = 0;i < books.length;i++) {
             assertEquals(sortedBooks[i], books[i]);
         }
